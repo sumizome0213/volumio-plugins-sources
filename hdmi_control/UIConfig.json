@@ -1,0 +1,28 @@
+{
+  "page": {
+    "label": "TRANSLATE.PLUGIN_CONFIGURATION"
+  },
+  "sections": [
+    {
+      "id": "control_setup",
+      "element": "section",
+      "label": "Setup HDMI-CEC control actions",
+      "icon": "fa-cogs",
+      "onSave": {"type":"controller", "endpoint":"system_hardware/hdmi_control", "method":"saveConfig"},
+      "saveButton": {
+        "label": "Save",
+        "data": [
+          "changeInputEnabled"
+        ]
+      },
+      "content": [
+        {
+          "id": "changeInputEnabled",
+          "element": "switch",
+          "label": "Enable input change when Play",
+          "value": false
+        }
+      ]
+    }
+  ]
+}
